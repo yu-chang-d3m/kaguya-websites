@@ -1,0 +1,23 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next
+/out
+
+# misc
+.DS_Store
+*.tgz
+
+# debug
+npm-debug.log*
+
+# claude code settings (may contain tokens)
+.claude/
+
+# env files
+.env
+.env*.local
+
+# typescript
+next-env.d.ts
