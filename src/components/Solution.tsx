@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Logo from "./Logo";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 /* チャットUI（中央カード用）- CSS で吹き出しを再現 */
 function ChatMockup() {
   return (
@@ -98,7 +100,7 @@ export default function Solution() {
           <div className="w-full lg:w-[400px] mx-auto flex flex-col">
             <div className="h-[180px] lg:h-[200px] flex items-center justify-center">
               <Image
-                src="/images/phone-mockup.png"
+                src={`${basePath}/images/phone-mockup.png`}
                 alt="スマホ動画モックアップ"
                 width={200}
                 height={200}

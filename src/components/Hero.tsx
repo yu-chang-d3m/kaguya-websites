@@ -2,6 +2,8 @@ import Image from "next/image";
 import Badge from "./Badge";
 import CTAButtons from "./CTAButtons";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 /* ─── スマホ内: V-Talk AI Concierge（ライトテーマ）─── */
 function PhoneScreen() {
   return (
@@ -149,7 +151,7 @@ export default function Hero() {
         }}
       >
         <Image
-          src="/images/hero-wave.png"
+          src={`${basePath}/images/hero-wave.png`}
           alt=""
           fill
           className="object-cover"

@@ -1,26 +1,28 @@
 import Image from "next/image";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const painPoints = [
   {
     category: "母集団形成",
     title: "「なかなか会社の雰囲気が\n伝わらない...」",
     description:
       "今のホームページや求人票では、職場の空気感や社員のリアルな働き方が候補者に伝わらない…",
-    image: "/images/pain-boshudan.png",
+    image: `${basePath}/images/pain-boshudan.png`,
   },
   {
     category: "面接",
     title: "「カジュアル面談に、\n工数を取られすぎている…」",
     description:
       "自社のことをよく知らない候補者との面談が続き、採用担当者の時間だけが消費されていく…",
-    image: "/images/pain-mensetsu.png",
+    image: `${basePath}/images/pain-mensetsu.png`,
   },
   {
     category: "内定承諾",
     title: "「実は、\n候補者のことがよくわからない…」",
     description:
       "どんな人が自社に興味があるのか、なぜ応募してくれないのか、わからない…",
-    image: "/images/pain-naitei.png",
+    image: `${basePath}/images/pain-naitei.png`,
   },
 ];
 
