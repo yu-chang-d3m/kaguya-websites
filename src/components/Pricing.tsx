@@ -90,7 +90,7 @@ function PlanIcon({
           <polygon points="23 7 16 12 23 17 23 7" />
           <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
         </svg>
-        <span className="text-lg font-bold">+</span>
+        <span className="text-[32px] font-black">+</span>
         <svg
           width="40"
           height="40"
@@ -128,10 +128,10 @@ export default function Pricing() {
   return (
     <section id="pricing" className="py-20 lg:py-32 bg-gray-border">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 className="text-2xl lg:text-[32px] font-medium text-center mb-4">
+        <h2 className="text-2xl lg:text-[32px] font-medium text-center text-black mb-4 leading-[1.5]">
           料金プラン
         </h2>
-        <p className="text-center text-[14px] lg:text-[16px] font-medium text-text-light mb-16">
+        <p className="text-center text-[14px] lg:text-[16px] font-medium text-black mb-16 leading-[1.5]">
           初期費用無料、初月無料で始められます
         </p>
 
@@ -141,13 +141,13 @@ export default function Pricing() {
               key={i}
               className={`rounded-[8px] p-6 lg:p-8 relative w-full max-w-[480px] mx-auto ${
                 plan.highlighted
-                  ? "bg-[#1c2a29] text-white"
-                  : "bg-white text-text"
+                  ? "bg-dark text-white"
+                  : "bg-white text-black"
               }`}
             >
               {/* おすすめバッジ */}
               {plan.highlighted && (
-                <span className="absolute -top-4 right-6 bg-primary text-white text-sm font-bold px-5 py-1.5 rounded-[50px]">
+                <span className="absolute -top-4 right-6 bg-primary text-white text-[16px] font-medium px-[16px] py-[12px] rounded-[50px] leading-[1.5]">
                   おすすめ
                 </span>
               )}
@@ -158,14 +158,14 @@ export default function Pricing() {
               </div>
 
               {/* プラン名 */}
-              <h3 className="text-2xl lg:text-[32px] font-medium mb-3">
+              <h3 className="text-2xl lg:text-[32px] font-medium mb-3 leading-[1.5]">
                 {plan.name}
               </h3>
 
               {/* 説明 */}
               <p
-                className={`text-[16px] mb-6 leading-relaxed ${
-                  plan.highlighted ? "text-white/80" : "text-text-light"
+                className={`text-[16px] mb-6 leading-[1.5] ${
+                  plan.highlighted ? "font-medium text-white" : "font-normal text-black"
                 }`}
               >
                 {plan.description}
@@ -174,17 +174,19 @@ export default function Pricing() {
               {/* 特典（セットプランのみ） */}
               {plan.bonus && (
                 <div className="bg-primary rounded-[4px] px-4 py-3 mb-6 flex items-center gap-2">
-                  <span className="text-sm font-bold text-white">🎁 特典</span>
-                  <span className="text-sm text-white">{plan.bonus}</span>
+                  <span className="text-[16px] font-bold text-white leading-[1.5]">🎁 特典</span>
+                  <span className="text-[16px] font-normal text-white leading-[1.5]">{plan.bonus}</span>
                 </div>
               )}
 
               {/* 機能リスト */}
-              <ul className="mb-6 space-y-1">
+              <ul className="mb-6 space-y-0">
                 {plan.features.map((feature, j) => (
                   <li
                     key={j}
-                    className="text-[16px] leading-[2]"
+                    className={`text-[16px] font-normal ${
+                      plan.highlighted ? "leading-[2]" : "leading-[2.1]"
+                    }`}
                   >
                     ・{feature}
                   </li>
@@ -193,20 +195,16 @@ export default function Pricing() {
 
               {/* おすすめボックス */}
               <div
-                className={`rounded-[4px] p-4 mb-6 min-h-[88px] ${
-                  plan.highlighted ? "bg-gray-border" : "bg-gray-border"
-                }`}
+                className={`rounded-[4px] p-4 mb-6 ${
+                  plan.highlighted ? "h-[88px]" : "h-[108px]"
+                } bg-gray-border`}
               >
-                <p
-                  className={`text-xs font-bold mb-1 ${
-                    plan.highlighted ? "text-text" : "text-text"
-                  }`}
-                >
+                <p className="text-[16px] font-bold mb-1 text-black leading-[1.5]">
                   こんな企業様におすすめ
                 </p>
                 <p
-                  className={`text-sm ${
-                    plan.highlighted ? "text-text-light" : "text-text-light"
+                  className={`text-[16px] leading-[1.5] ${
+                    plan.highlighted ? "text-[#1c2a29]" : "text-black"
                   }`}
                 >
                   {plan.recommendation}
@@ -217,13 +215,13 @@ export default function Pricing() {
               <div className="space-y-3">
                 <a
                   href="#contact"
-                  className="block text-center py-3 rounded-[88px] font-bold text-[16px] transition-colors bg-primary text-white hover:bg-primary-dark"
+                  className="block text-center py-3 rounded-[88px] font-bold text-[16px] transition-colors bg-primary text-white hover:bg-primary-dark leading-[1.5]"
                 >
                   無料トライアルに申し込む
                 </a>
                 <a
                   href="#contact"
-                  className="block text-center py-3 rounded-[88px] font-bold text-[16px] border-3 transition-colors border-[#00ac92] bg-white text-[#00b183] hover:bg-primary/5"
+                  className="block text-center py-3 rounded-[88px] font-bold text-[16px] border-3 transition-colors border-[#00ac92] bg-white text-[#00b183] hover:bg-primary/5 leading-[1.5]"
                 >
                   ３分でわかる資料をダウンロード
                 </a>

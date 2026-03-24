@@ -3,10 +3,11 @@
 @theme {
   --color-primary: #00ac92;
   --color-primary-dark: #009980;
-  --color-dark: #1c2929;
+  --color-dark: #1c2a29;
   --color-dark-light: #2f2f2f;
   --color-gray-bg: #f7f7f7;
   --color-gray-border: #e9ecec;
+  --color-light-gray: #f8f8f8;
   --color-text: #151515;
   --color-text-light: #323435;
 }

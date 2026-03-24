@@ -16,9 +16,9 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-[0px_1px_32px_rgba(0,0,0,0.05)]">
-      <div className="max-w-[1264px] mx-auto flex items-center justify-between px-6 lg:px-0 h-[68px]">
+      <div className="max-w-[1264px] mx-auto flex items-center justify-between px-4 lg:px-0 h-[44px] lg:h-[68px]">
         <a href="#" className="flex items-center">
-          <Logo className="h-6" />
+          <Logo className="h-4 lg:h-6" />
         </a>
 
         <nav className="hidden lg:flex items-center">
@@ -26,7 +26,7 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="text-[16px] font-medium text-text-light hover:text-primary transition-colors px-4 py-2.5"
+              className="text-[16px] font-medium text-black hover:text-primary transition-colors px-[16px] py-[10px] leading-[1.5]"
             >
               {item.label}
             </a>
@@ -61,7 +61,7 @@ export default function Header() {
             <a
               key={item.href}
               href={item.href}
-              className="block text-[16px] font-medium text-text-light hover:text-primary"
+              className="block text-[16px] font-medium text-black hover:text-primary"
               onClick={() => setMenuOpen(false)}
             >
               {item.label}

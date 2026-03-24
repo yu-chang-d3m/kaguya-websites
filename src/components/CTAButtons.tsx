@@ -18,13 +18,13 @@ export default function CTAButtons({
     <div className={`flex ${layout === "col" ? "flex-col gap-[23px]" : "flex-col sm:flex-row gap-4"} justify-center lg:justify-start`}>
       <a
         href="#contact"
-        className={`inline-flex items-center justify-center w-full sm:w-[400px] h-[56px] rounded-[88px] font-bold text-[16px] transition-colors shadow-[0px_4px_32px_rgba(0,0,0,0.15)] ${primaryClass}`}
+        className={`inline-flex items-center justify-center w-[342px] lg:w-[400px] h-[56px] rounded-[88px] font-bold text-[16px] transition-colors shadow-[0px_4px_32px_rgba(0,0,0,0.15)] ${primaryClass}`}
       >
         無料トライアルに申し込む
       </a>
       <a
         href="#contact"
-        className={`inline-flex items-center justify-center w-full sm:w-[400px] h-[56px] rounded-[88px] font-bold text-[16px] transition-colors shadow-[0px_4px_32px_rgba(0,0,0,0.15)] ${secondaryClass}`}
+        className={`inline-flex items-center justify-center w-[342px] lg:w-[400px] h-[56px] rounded-[88px] font-bold text-[16px] transition-colors shadow-[0px_4px_32px_rgba(0,0,0,0.15)] ${secondaryClass}`}
       >
         ３分でわかる資料をダウンロード
       </a>

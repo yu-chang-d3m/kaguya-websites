@@ -29,8 +29,8 @@ const painPoints = [
 export default function PainPoints() {
   return (
     <section className="relative bg-gray-bg pt-16 lg:pt-24 pb-0">
-      {/* タイトル */}
-      <h2 className="text-[24px] lg:text-[30px] font-medium text-center text-black mb-10 lg:mb-16 px-6">
+      {/* タイトル — Figma: 30px on PC, font-medium */}
+      <h2 className="text-[22px] lg:text-[30px] font-medium text-center text-black mb-10 lg:mb-16 px-6">
         こんなお悩み、ありませんか？
       </h2>
 
@@ -53,14 +53,14 @@ export default function PainPoints() {
             </div>
 
             {/* 下部: テキストエリア */}
-            <div className="bg-white rounded-[8px] p-[20px] lg:p-[24px] flex-1">
-              <p className="text-[15px] font-light text-black/50 text-center">
+            <div className="bg-white rounded-[8px] p-[24px] flex-1 flex flex-col gap-[8px]">
+              <p className="text-[15px] font-light text-black/50 text-center leading-none">
                 {point.category}
               </p>
-              <h3 className="text-[18px] lg:text-[20px] font-bold text-center leading-[1.5] mt-2 mb-3 whitespace-pre-line">
+              <h3 className="text-[18px] lg:text-[20px] font-bold text-black text-center leading-[1.5] h-[60px] flex items-center justify-center whitespace-pre-line">
                 {point.title}
               </h3>
-              <p className="text-[14px] lg:text-[16px] font-normal leading-[1.5] text-text-light">
+              <p className="text-[14px] lg:text-[16px] font-normal leading-[1.5] text-black">
                 {point.description}
               </p>
             </div>

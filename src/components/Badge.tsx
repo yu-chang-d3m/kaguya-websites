@@ -1,17 +1,29 @@
-export default function Badge() {
+export default function Badge({
+  shadow = "default",
+}: {
+  shadow?: "default" | "dark";
+}) {
+  const shadowClass =
+    shadow === "dark"
+      ? "shadow-[0px_4px_32px_0px_rgba(0,0,0,0.25)]"
+      : "shadow-[0px_4px_32px_0px_rgba(0,0,0,0.15)]";
+
   return (
-    <div className="w-[140px] h-[140px] lg:w-[170px] lg:h-[170px] rounded-full bg-white flex flex-col items-center justify-center text-center shadow-[0px_4px_32px_rgba(0,0,0,0.25)]">
-      <span className="text-[12px] lg:text-[14px] text-[#008878] leading-tight">
+    <div
+      className={`w-[170px] h-[170px] rounded-[110px] bg-white flex flex-col items-center justify-center text-center ${shadowClass}`}
+    >
+      <span className="text-[14px] font-medium text-[#00ac92] leading-[1.2]">
         先着
       </span>
-      <span className="text-[22px] lg:text-[27px] font-bold text-[#008878] leading-tight">
+      <span className="text-[27px] font-bold text-[#00ac92] leading-[1.2]">
         10社限定
       </span>
-      <span className="text-[19px] lg:text-[23px] font-bold text-[#008878] leading-tight mt-0.5">
+      <span className="text-[23px] font-bold text-[#00ac92] leading-[1.5]">
         初期費用0円
       </span>
-      <span className="text-[12px] lg:text-[14px] text-[#008878] leading-tight mt-0.5">
-        初月無料でスタート
+      <span className="text-[14px] text-[#00ac92] leading-[1.5]">
+        <span className="font-bold">初月無料</span>
+        <span className="font-medium">でスタート</span>
       </span>
     </div>
   );

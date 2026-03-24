@@ -42,20 +42,20 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-20 lg:py-32 bg-gray-border">
-      <div className="max-w-4xl mx-auto px-6 lg:px-12">
-        <h2 className="text-2xl lg:text-[32px] font-medium text-center mb-4">
+    <section id="faq" className="py-20 lg:py-32 bg-white">
+      <div className="max-w-[919px] mx-auto px-6 lg:px-0">
+        <h2 className="text-2xl lg:text-[32px] font-medium text-center text-black mb-4 leading-[1.5]">
           よくある質問
         </h2>
-        <p className="text-center text-[16px] lg:text-[20px] text-text-light mb-12">
+        <p className="text-center text-[16px] lg:text-[20px] font-normal text-black mb-12 leading-[1.5]">
           V-Talkについて、お客さまからよくいただくご質問をまとめました。
         </p>
 
-        <div className="space-y-0">
+        <div className="flex flex-col gap-[4px]">
           {faqs.map((faq, i) => (
             <div key={i}>
               <button
-                className="w-full flex items-center justify-between bg-white px-[10px] py-[14px] text-left text-[14px] lg:text-[16px] font-normal hover:text-primary transition-colors shadow-[0px_1px_0px_rgba(0,0,0,0.05)]"
+                className="w-full flex items-center justify-between bg-white px-[10px] py-[14px] text-left text-[14px] lg:text-[16px] font-normal text-black hover:text-primary transition-colors shadow-[0px_1px_0px_0px_rgba(0,0,0,0.05)] leading-[1.5]"
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
               >
                 <span>{faq}</span>
@@ -74,7 +74,7 @@ export default function FAQ() {
                 </svg>
               </button>
               {openIndex === i && (
-                <div className="bg-white px-[10px] pb-[14px] text-sm text-text-light leading-relaxed">
+                <div className="bg-white px-[10px] pb-[14px] text-[14px] text-text-light leading-[1.5]">
                   {faqAnswers[faq]}
                 </div>
               )}

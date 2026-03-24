@@ -112,7 +112,7 @@ export default function Steps() {
   return (
     <section id="steps" className="py-20 lg:py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 className="text-xl lg:text-[32px] font-medium text-center mb-16">
+        <h2 className="text-xl lg:text-[32px] font-medium text-center text-black mb-16 leading-[1.5]">
           企画も撮影も不要。今の資料が動画に変わります。
         </h2>
 
@@ -134,7 +134,7 @@ export default function Steps() {
                 </div>
 
                 {/* テキスト */}
-                <p className="text-[16px] lg:text-[20px] font-medium whitespace-pre-line leading-[1.5] text-center">
+                <p className="text-[16px] lg:text-[20px] font-normal text-black whitespace-pre-line leading-[1.5] text-center">
                   {s.title}
                 </p>
               </div>

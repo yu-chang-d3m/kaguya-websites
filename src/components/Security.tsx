@@ -57,23 +57,23 @@ export default function Security() {
   return (
     <section className="py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 className="text-xl lg:text-[32px] font-medium text-center mb-3">
+        <h2 className="text-xl lg:text-[32px] font-medium text-center text-black mb-3 leading-[1.5]">
           セキュリティについて
         </h2>
-        <p className="text-center text-[16px] lg:text-[20px] font-medium text-text-light mb-12">
+        <p className="text-center text-[16px] lg:text-[20px] font-medium text-black mb-12 leading-[1.5]">
           安心して導入いただけます
         </p>
 
-        <div className="flex flex-col md:flex-row justify-center gap-6 lg:gap-8 max-w-[1264px] mx-auto">
+        <div className="flex flex-col md:flex-row justify-center gap-[32px] max-w-[1264px] mx-auto">
           {securityItems.map((item, i) => (
             <div
               key={i}
-              className="flex items-center gap-4 bg-[#f8f8f8] rounded-lg p-[10px] w-full md:w-[400px]"
+              className="flex items-center gap-[10px] bg-light-gray p-[10px] w-full md:w-[400px]"
             >
-              <div className="w-12 h-12 flex-shrink-0 flex items-center justify-center">
+              <div className="w-[48px] h-[48px] flex-shrink-0 flex items-center justify-center">
                 {item.icon}
               </div>
-              <p className="text-[16px] font-medium whitespace-pre-line leading-relaxed">
+              <p className="text-[16px] font-medium text-black whitespace-pre-line leading-[1.5]">
                 {item.title}
               </p>
             </div>

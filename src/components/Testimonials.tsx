@@ -13,19 +13,19 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="py-20 lg:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <h2 className="text-[16px] lg:text-[20px] font-medium text-center mb-12">
+      <div className="max-w-[1264px] mx-auto px-6 lg:px-0">
+        <h2 className="text-[16px] lg:text-[20px] font-medium text-black text-center mb-12 leading-[1.5]">
           お客様の声
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1280px] mx-auto">
+        <div className="flex flex-col lg:flex-row justify-center gap-8">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="bg-[#f8f8f8] rounded-[8px] p-6 lg:p-8 flex flex-col items-center text-center"
+              className="bg-light-gray w-full lg:w-[400px] h-auto lg:h-[139px] flex items-center gap-4 px-6 py-4 lg:py-0"
             >
-              <div className="w-[60px] lg:w-[75px] h-[60px] lg:h-[75px] rounded-full bg-[#d9d9d9] mb-4" />
-              <p className="text-[14px] lg:text-[16px] font-medium whitespace-pre-line leading-relaxed">
+              <div className="w-[75px] h-[75px] rounded-[110px] bg-[#d9d9d9] shrink-0" />
+              <p className="text-[16px] font-medium text-black whitespace-pre-line leading-[1.5]">
                 {t.quote}
               </p>
             </div>
