@@ -93,10 +93,13 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* PC: 6+5 の2段グリッド */}
+          {/* PC: 5個ずつ2段グリッド */}
           <div className="hidden lg:block max-w-[1264px] mx-auto">
             <div className="flex flex-wrap justify-center gap-[32px] mb-[24px]">
               {/* 実ロゴ 5社 */}
+              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
+                <Image src={`${basePath}/images/logos/dairii.svg`} alt="dairii" width={160} height={56} className="object-contain max-h-[56px]" />
+              </div>
               <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
                 <Image src={`${basePath}/images/logos/hrdoc.svg`} alt="HR doc." width={160} height={56} className="object-contain max-h-[56px]" />
               </div>
@@ -107,14 +110,7 @@ export default function Hero() {
                 <Image src={`${basePath}/images/logos/quuu.svg`} alt="quuu" width={160} height={56} className="object-contain max-h-[56px]" />
               </div>
               <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
-                <Image src={`${basePath}/images/logos/dairii.svg`} alt="dairii" width={160} height={56} className="object-contain max-h-[56px]" />
-              </div>
-              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
                 <Image src={`${basePath}/images/logos/d3m.svg`} alt="D3M" width={160} height={56} className="object-contain max-h-[56px]" />
-              </div>
-              {/* Coming soon */}
-              <div className="w-[184px] h-[72px] bg-[#f0f0f0] rounded flex items-center justify-center">
-                <span className="text-[13px] text-black/30 font-medium">Coming soon</span>
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-[32px]">
@@ -131,19 +127,19 @@ export default function Hero() {
             {/* Row 1: 実ロゴ 3社 */}
             <div className="flex justify-center gap-[9px] mb-[8px]">
               <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
+                <Image src={`${basePath}/images/logos/dairii.svg`} alt="dairii" width={96} height={36} className="object-contain max-h-[36px]" />
+              </div>
+              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
                 <Image src={`${basePath}/images/logos/hrdoc.svg`} alt="HR doc." width={96} height={36} className="object-contain max-h-[36px]" />
               </div>
               <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
                 <Image src={`${basePath}/images/logos/omochiii.svg`} alt="omochiii" width={96} height={36} className="object-contain max-h-[36px]" />
               </div>
-              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
-                <Image src={`${basePath}/images/logos/quuu.svg`} alt="quuu" width={96} height={36} className="object-contain max-h-[36px]" />
-              </div>
             </div>
             {/* Row 2: 実ロゴ 2社 */}
             <div className="flex justify-center gap-[9px] mb-[8px]">
               <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
-                <Image src={`${basePath}/images/logos/dairii.svg`} alt="dairii" width={96} height={36} className="object-contain max-h-[36px]" />
+                <Image src={`${basePath}/images/logos/quuu.svg`} alt="quuu" width={96} height={36} className="object-contain max-h-[36px]" />
               </div>
               <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
                 <Image src={`${basePath}/images/logos/d3m.svg`} alt="D3M" width={96} height={36} className="object-contain max-h-[36px]" />
