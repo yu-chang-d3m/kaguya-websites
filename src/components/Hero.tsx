@@ -85,58 +85,84 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* ■ トラスト / 導入実績セクション */}
+        {/* ■ トラスト / 導入企業セクション */}
         <div className="mt-6 lg:mt-[83px] text-center">
           <div className="inline-block bg-white rounded-[30px] px-[16px] py-[12px] mb-[24px]">
             <p className="text-[13px] lg:text-[16px] font-medium text-black leading-[1.5]">
-              2月にベータ版ローンチ後、現在10社以上の企業様でトライアル実施中
+              導入企業の例
             </p>
           </div>
 
           {/* PC: 6+5 の2段グリッド */}
           <div className="hidden lg:block max-w-[1264px] mx-auto">
             <div className="flex flex-wrap justify-center gap-[32px] mb-[24px]">
-              {Array.from({ length: 6 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="w-[184px] h-[72px] bg-[#d9d9d9] rounded"
-                />
-              ))}
+              {/* 実ロゴ 5社 */}
+              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
+                <Image src={`${basePath}/images/logos/hrdoc.svg`} alt="HR doc." width={160} height={56} className="object-contain max-h-[56px]" />
+              </div>
+              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
+                <Image src={`${basePath}/images/logos/omochiii.svg`} alt="omochiii" width={160} height={56} className="object-contain max-h-[56px]" />
+              </div>
+              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
+                <Image src={`${basePath}/images/logos/quuu.svg`} alt="quuu" width={160} height={56} className="object-contain max-h-[56px]" />
+              </div>
+              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
+                <Image src={`${basePath}/images/logos/dairii.svg`} alt="dairii" width={160} height={56} className="object-contain max-h-[56px]" />
+              </div>
+              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
+                <Image src={`${basePath}/images/logos/d3m.svg`} alt="D3M" width={160} height={56} className="object-contain max-h-[56px]" />
+              </div>
+              {/* Coming soon */}
+              <div className="w-[184px] h-[72px] bg-[#f0f0f0] rounded flex items-center justify-center">
+                <span className="text-[13px] text-black/30 font-medium">Coming soon</span>
+              </div>
             </div>
             <div className="flex flex-wrap justify-center gap-[32px]">
               {Array.from({ length: 5 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="w-[184px] h-[72px] bg-[#d9d9d9] rounded"
-                />
+                <div key={i} className="w-[184px] h-[72px] bg-[#f0f0f0] rounded flex items-center justify-center">
+                  <span className="text-[13px] text-black/30 font-medium">Coming soon</span>
+                </div>
               ))}
             </div>
           </div>
 
-          {/* SP: 3列ハニカム配置（Figma準拠: 108x45px, 10個） */}
+          {/* SP: 3列ハニカム配置 */}
           <div className="lg:hidden max-w-[342px] mx-auto">
-            {/* Row 1: 3個 */}
+            {/* Row 1: 実ロゴ 3社 */}
+            <div className="flex justify-center gap-[9px] mb-[8px]">
+              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
+                <Image src={`${basePath}/images/logos/hrdoc.svg`} alt="HR doc." width={96} height={36} className="object-contain max-h-[36px]" />
+              </div>
+              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
+                <Image src={`${basePath}/images/logos/omochiii.svg`} alt="omochiii" width={96} height={36} className="object-contain max-h-[36px]" />
+              </div>
+              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
+                <Image src={`${basePath}/images/logos/quuu.svg`} alt="quuu" width={96} height={36} className="object-contain max-h-[36px]" />
+              </div>
+            </div>
+            {/* Row 2: 実ロゴ 2社 */}
+            <div className="flex justify-center gap-[9px] mb-[8px]">
+              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
+                <Image src={`${basePath}/images/logos/dairii.svg`} alt="dairii" width={96} height={36} className="object-contain max-h-[36px]" />
+              </div>
+              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
+                <Image src={`${basePath}/images/logos/d3m.svg`} alt="D3M" width={96} height={36} className="object-contain max-h-[36px]" />
+              </div>
+            </div>
+            {/* Row 3: Coming soon */}
             <div className="flex justify-center gap-[9px] mb-[8px]">
               {Array.from({ length: 3 }).map((_, i) => (
-                <div key={i} className="w-[108px] h-[45px] bg-[#d9d9d9] rounded" />
+                <div key={i} className="w-[108px] h-[45px] bg-[#f0f0f0] rounded flex items-center justify-center">
+                  <span className="text-[10px] text-black/30 font-medium">Coming soon</span>
+                </div>
               ))}
             </div>
-            {/* Row 2: 2個（オフセット） */}
-            <div className="flex justify-center gap-[9px] mb-[8px]">
-              {Array.from({ length: 2 }).map((_, i) => (
-                <div key={i} className="w-[108px] h-[45px] bg-[#d9d9d9] rounded" />
-              ))}
-            </div>
-            {/* Row 3: 3個 */}
-            <div className="flex justify-center gap-[9px] mb-[8px]">
-              {Array.from({ length: 3 }).map((_, i) => (
-                <div key={i} className="w-[108px] h-[45px] bg-[#d9d9d9] rounded" />
-              ))}
-            </div>
-            {/* Row 4: 2個（オフセット） */}
+            {/* Row 4: Coming soon */}
             <div className="flex justify-center gap-[9px]">
               {Array.from({ length: 2 }).map((_, i) => (
-                <div key={i} className="w-[108px] h-[45px] bg-[#d9d9d9] rounded" />
+                <div key={i} className="w-[108px] h-[45px] bg-[#f0f0f0] rounded flex items-center justify-center">
+                  <span className="text-[10px] text-black/30 font-medium">Coming soon</span>
+                </div>
               ))}
             </div>
           </div>

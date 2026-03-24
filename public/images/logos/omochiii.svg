@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="80" viewBox="0 0 280 80">
+  <!-- Blob character -->
+  <g transform="translate(20, 8)">
+    <ellipse cx="28" cy="42" rx="26" ry="22" fill="#c8d8e8" />
+    <ellipse cx="28" cy="26" rx="18" ry="16" fill="#c8d8e8" />
+    <circle cx="34" cy="18" r="6" fill="none" stroke="#e06020" stroke-width="2.5" />
+    <circle cx="34" cy="18" r="2" fill="#e06020" />
+  </g>
+  <!-- Text -->
+  <text x="180" y="52" text-anchor="middle" font-family="'Rounded Mplus 1c', 'Hiragino Maru Gothic ProN', sans-serif" font-size="28" fill="#c0d0e0" font-weight="400" letter-spacing="1">omochiii</text>
+</svg>
