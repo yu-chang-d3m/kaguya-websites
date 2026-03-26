@@ -4,6 +4,16 @@ import CTAButtons from "./CTAButtons";
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
+const logos = [
+  { src: "dairii.svg", alt: "dairii" },
+  { src: "hrdoc.svg", alt: "HR doc." },
+  { src: "omochiii.svg", alt: "omochiii" },
+  { src: "quuu.svg", alt: "quuu" },
+  { src: "d3m.svg", alt: "D3M" },
+  { src: "hitokuse.svg", alt: "ヒトクセ" },
+  { src: "proreach.svg", alt: "Proreach" },
+];
+
 export default function Hero() {
   return (
     <section className="relative pt-[44px] lg:pt-[68px] overflow-hidden">
@@ -28,7 +38,7 @@ export default function Hero() {
       </div>
 
       {/* ■ ヒーロー本体 */}
-      <div className="relative max-w-[1264px] mx-auto px-4 lg:px-0">
+      <div className="relative max-w-[1264px] mx-auto px-6 lg:px-12">
         {/* ── メインヒーローエリア ── */}
         <div className="relative min-h-[710px] lg:min-h-[750px] py-0 lg:py-0">
           {/* SP: デバイス画像（テキストの右側背景として配置） */}
@@ -93,83 +103,34 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* PC: 5個ずつ2段グリッド */}
-          <div className="hidden lg:block max-w-[1264px] mx-auto">
-            <div className="flex flex-wrap justify-center gap-[32px] mb-[24px]">
-              {/* 実ロゴ 5社 */}
-              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
-                <Image src={`${basePath}/images/logos/dairii.svg`} alt="dairii" width={160} height={56} className="object-contain max-h-[56px]" />
-              </div>
-              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
-                <Image src={`${basePath}/images/logos/hrdoc.svg`} alt="HR doc." width={160} height={56} className="object-contain max-h-[56px]" />
-              </div>
-              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
-                <Image src={`${basePath}/images/logos/omochiii.svg`} alt="omochiii" width={160} height={56} className="object-contain max-h-[56px]" />
-              </div>
-              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
-                <Image src={`${basePath}/images/logos/quuu.svg`} alt="quuu" width={160} height={56} className="object-contain max-h-[56px]" />
-              </div>
-              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
-                <Image src={`${basePath}/images/logos/d3m.svg`} alt="D3M" width={160} height={56} className="object-contain max-h-[56px]" />
-              </div>
-            </div>
-            <div className="flex flex-wrap justify-center gap-[32px]">
-              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
-                <Image src={`${basePath}/images/logos/hitokuse.svg`} alt="ヒトクセ" width={160} height={56} className="object-contain max-h-[56px]" />
-              </div>
-              <div className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2">
-                <Image src={`${basePath}/images/logos/proreach.svg`} alt="Proreach" width={160} height={56} className="object-contain max-h-[56px]" />
-              </div>
-              {Array.from({ length: 3 }).map((_, i) => (
-                <div key={i} className="w-[184px] h-[72px] bg-[#f0f0f0] rounded flex items-center justify-center">
-                  <span className="text-[13px] text-black/30 font-medium">Coming soon</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* SP: 3列ハニカム配置 */}
-          <div className="lg:hidden max-w-[342px] mx-auto">
-            {/* Row 1: 実ロゴ 3社 */}
-            <div className="flex justify-center gap-[9px] mb-[8px]">
-              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
-                <Image src={`${basePath}/images/logos/dairii.svg`} alt="dairii" width={96} height={36} className="object-contain max-h-[36px]" />
-              </div>
-              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
-                <Image src={`${basePath}/images/logos/hrdoc.svg`} alt="HR doc." width={96} height={36} className="object-contain max-h-[36px]" />
-              </div>
-              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
-                <Image src={`${basePath}/images/logos/omochiii.svg`} alt="omochiii" width={96} height={36} className="object-contain max-h-[36px]" />
-              </div>
-            </div>
-            {/* Row 2: 実ロゴ 3社 */}
-            <div className="flex justify-center gap-[9px] mb-[8px]">
-              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
-                <Image src={`${basePath}/images/logos/quuu.svg`} alt="quuu" width={96} height={36} className="object-contain max-h-[36px]" />
-              </div>
-              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
-                <Image src={`${basePath}/images/logos/d3m.svg`} alt="D3M" width={96} height={36} className="object-contain max-h-[36px]" />
-              </div>
-              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
-                <Image src={`${basePath}/images/logos/hitokuse.svg`} alt="ヒトクセ" width={96} height={36} className="object-contain max-h-[36px]" />
-              </div>
-            </div>
-            {/* Row 3: 実ロゴ 1社 + Coming soon */}
-            <div className="flex justify-center gap-[9px] mb-[8px]">
-              <div className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1">
-                <Image src={`${basePath}/images/logos/proreach.svg`} alt="Proreach" width={96} height={36} className="object-contain max-h-[36px]" />
-              </div>
-              {Array.from({ length: 2 }).map((_, i) => (
-                <div key={i} className="w-[108px] h-[45px] bg-[#f0f0f0] rounded flex items-center justify-center">
-                  <span className="text-[10px] text-black/30 font-medium">Coming soon</span>
-                </div>
-              ))}
-            </div>
-            {/* Row 4: Coming soon */}
-            <div className="flex justify-center gap-[9px]">
-              {Array.from({ length: 2 }).map((_, i) => (
-                <div key={i} className="w-[108px] h-[45px] bg-[#f0f0f0] rounded flex items-center justify-center">
-                  <span className="text-[10px] text-black/30 font-medium">Coming soon</span>
+          {/* ロゴカルーセル */}
+          <div
+            className="relative overflow-hidden"
+            style={{
+              WebkitMaskImage:
+                "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
+              maskImage:
+                "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
+            }}
+          >
+            <div className="flex animate-marquee hover:[animation-play-state:paused] w-max">
+              {/* 2セット並べて無限ループ */}
+              {[0, 1].map((set) => (
+                <div key={set} className="flex gap-[24px] lg:gap-[32px] px-[12px] lg:px-[16px]">
+                  {logos.map((logo) => (
+                    <div
+                      key={`${set}-${logo.alt}`}
+                      className="w-[108px] h-[45px] lg:w-[184px] lg:h-[72px] bg-white rounded flex items-center justify-center p-1 lg:p-2 flex-shrink-0"
+                    >
+                      <Image
+                        src={`${basePath}/images/logos/${logo.src}`}
+                        alt={logo.alt}
+                        width={160}
+                        height={56}
+                        className="object-contain max-h-[36px] lg:max-h-[56px]"
+                      />
+                    </div>
+                  ))}
                 </div>
               ))}
             </div>

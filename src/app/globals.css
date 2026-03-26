@@ -10,6 +10,16 @@
   --color-light-gray: #f8f8f8;
   --color-text: #151515;
   --color-text-light: #323435;
+  --animate-marquee: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 html {
