@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
-const isProd = process.env.NODE_ENV === "production";
-const basePath = isProd ? "/kaguya-websites" : "";
+// GitHub Pages: NEXT_PUBLIC_BASE_PATH="/kaguya-websites"
+// Vercel / ローカル: 設定不要（ルートで配信）
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const nextConfig: NextConfig = {
   output: "export",
