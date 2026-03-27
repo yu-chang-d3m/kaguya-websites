@@ -54,8 +54,8 @@ export default function Hero() {
             />
           </div>
 
-          {/* ── 左側テキスト ── */}
-          <div className="relative text-left lg:absolute lg:left-0 lg:top-[66px] lg:w-[45%] pt-[21px] lg:pt-0">
+          {/* ── 左カラム: テキスト・バッジ・CTA（通常フローで重なり防止） ── */}
+          <div className="relative text-left lg:max-w-[55%] pt-[21px] lg:pt-[66px]">
             {/* ラベル（SPでは非表示 — Figma SPに無い） */}
             <span className="hidden lg:inline-block text-[20px] font-medium text-black/50 mb-3">
               採用支援 AI
@@ -70,20 +70,20 @@ export default function Hero() {
             <p className="text-[20px] lg:text-[35px] font-medium text-black mb-0">
               採用の機会損失をゼロに。
             </p>
-          </div>
 
-          {/* ── バッジ ── */}
-          <div className="relative flex justify-start mt-6 lg:mt-0 lg:absolute lg:left-0 lg:top-[382px]">
-            <Badge />
-          </div>
+            {/* ── バッジ ── */}
+            <div className="flex justify-start mt-6 lg:mt-8">
+              <Badge />
+            </div>
 
-          {/* ── CTAボタン（縦積み） ── */}
-          <div className="relative mt-6 lg:mt-0 lg:absolute lg:left-0 lg:top-[598px]">
-            <CTAButtons layout="col" />
+            {/* ── CTAボタン（縦積み） ── */}
+            <div className="mt-6 lg:mt-10">
+              <CTAButtons layout="col" />
+            </div>
           </div>
 
           {/* PC: デバイスモックアップ画像 */}
-          <div className="hidden lg:block lg:absolute lg:top-[264px] lg:left-[38%] lg:right-0">
+          <div className="hidden lg:block lg:absolute lg:top-[200px] lg:left-[45%] lg:right-0">
             <Image
               src={`${basePath}/images/hero-devices.png`}
               alt="V-Talk デモ画面 — iPhone チャット画面と MacBook ダッシュボード"
