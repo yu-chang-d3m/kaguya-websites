@@ -16,7 +16,7 @@ const logos = [
 
 export default function Hero() {
   return (
-    <section className="relative pt-[44px] lg:pt-[68px] overflow-hidden">
+    <section className="relative pt-[44px] lg:pt-[68px]">
       {/* ■ 背景: 淡いグレーの音声波形（端にフェードアウト） */}
       <div
         className="absolute inset-0 h-[700px] lg:h-[1099px]"
@@ -38,11 +38,11 @@ export default function Hero() {
       </div>
 
       {/* ■ ヒーロー本体 */}
-      <div className="relative max-w-[1264px] mx-auto px-6 lg:px-12">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
         {/* ── メインヒーローエリア ── */}
-        <div className="relative min-h-[710px] lg:min-h-[750px] py-0 lg:py-0">
+        <div className="relative min-h-[710px] lg:min-h-[750px]">
           {/* SP: デバイス画像（テキストの右側背景として配置） */}
-          <div className="absolute right-[-60px] top-[45px] w-[280px] lg:hidden">
+          <div className="absolute right-[-36px] top-[45px] w-[280px] lg:hidden">
             <Image
               src={`${basePath}/images/hero-devices.png`}
               alt=""
@@ -55,7 +55,7 @@ export default function Hero() {
           </div>
 
           {/* ── 左側テキスト ── */}
-          <div className="relative text-left lg:absolute lg:left-0 lg:top-[66px] lg:w-[650px] pt-[21px] lg:pt-0">
+          <div className="relative text-left lg:absolute lg:left-0 lg:top-[66px] lg:w-[45%] pt-[21px] lg:pt-0">
             {/* ラベル（SPでは非表示 — Figma SPに無い） */}
             <span className="hidden lg:inline-block text-[20px] font-medium text-black/50 mb-3">
               採用支援 AI
@@ -83,7 +83,7 @@ export default function Hero() {
           </div>
 
           {/* PC: デバイスモックアップ画像 */}
-          <div className="hidden lg:block lg:absolute lg:left-[452px] lg:top-[264px] lg:w-[963px]">
+          <div className="hidden lg:block lg:absolute lg:top-[264px] lg:left-[38%] lg:right-0">
             <Image
               src={`${basePath}/images/hero-devices.png`}
               alt="V-Talk デモ画面 — iPhone チャット画面と MacBook ダッシュボード"
