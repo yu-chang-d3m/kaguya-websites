@@ -140,6 +140,8 @@ export default function Pricing() {
             <div
               key={i}
               className={`rounded-[8px] p-6 lg:p-8 relative w-full max-w-[480px] mx-auto ${
+                plan.highlighted ? "-order-1 lg:order-none" : ""
+              } ${
                 plan.highlighted
                   ? "bg-dark text-white"
                   : "bg-white text-black"

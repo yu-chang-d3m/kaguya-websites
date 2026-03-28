@@ -139,24 +139,44 @@ export default function Steps() {
                 </p>
               </div>
 
-              {/* 矢印（最後のステップ以外、PC のみ） */}
+              {/* 矢印（最後のステップ以外） */}
               {i < steps.length - 1 && (
-                <div className="hidden lg:flex items-center self-center pt-4">
-                  <svg
-                    width="24"
-                    height="32"
-                    viewBox="0 0 24 32"
-                    fill="none"
-                  >
-                    <path
-                      d="M4 4l16 12-16 12"
-                      stroke="#00ac92"
-                      strokeWidth="3"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
+                <>
+                  {/* SP: 下向き矢印 */}
+                  <div className="flex lg:hidden justify-center -mt-2 -mb-2">
+                    <svg
+                      width="32"
+                      height="24"
+                      viewBox="0 0 32 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M4 4l12 16 12-16"
+                        stroke="#00ac92"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  {/* PC: 右向き矢印 */}
+                  <div className="hidden lg:flex items-center self-center pt-4">
+                    <svg
+                      width="24"
+                      height="32"
+                      viewBox="0 0 24 32"
+                      fill="none"
+                    >
+                      <path
+                        d="M4 4l16 12-16 12"
+                        stroke="#00ac92"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </>
               )}
             </div>
           ))}

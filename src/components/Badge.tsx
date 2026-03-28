@@ -12,8 +12,11 @@ export default function Badge({
     <div
       className={`w-[170px] h-[170px] rounded-[110px] bg-white flex flex-col items-center justify-center text-center ${shadowClass}`}
     >
+      <span className="text-[18px] font-bold text-[#00ac92] leading-[1.2]">
+        先着
+      </span>
       <span className="text-[27px] font-bold text-[#00ac92] leading-[1.2]">
-        4月限定
+        10社限定
       </span>
       <span className="text-[23px] font-bold text-[#00ac92] leading-[1.5]">
         初期費用0円

@@ -16,7 +16,7 @@ const logos = [
 
 export default function Hero() {
   return (
-    <section className="relative pt-[44px] lg:pt-[68px]">
+    <section className="relative pt-[44px] lg:pt-[68px] overflow-hidden">
       {/* ■ 背景: 淡いグレーの音声波形（端にフェードアウト） */}
       <div
         className="absolute inset-0 h-[700px] lg:h-[1099px]"
@@ -41,15 +41,14 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-6 lg:px-12">
         {/* ── メインヒーローエリア ── */}
         <div className="relative min-h-[710px] lg:min-h-[750px]">
-          {/* SP: デバイス画像（テキストの右側背景として配置） */}
-          <div className="absolute right-[-36px] top-[45px] w-[280px] lg:hidden">
+          {/* SP: デバイス画像（iPhone モックアップ — Figma: 299x611 at x=149） */}
+          <div className="absolute right-[-60px] top-[45px] w-[280px] lg:hidden">
             <Image
-              src={`${basePath}/images/hero-devices.png`}
-              alt=""
-              width={963}
-              height={484}
-              className="w-[700px] max-w-none h-auto"
-              style={{ opacity: 0.2 }}
+              src={`${basePath}/images/hero-device-sp.png`}
+              alt="V-Talk アプリ画面"
+              width={598}
+              height={1222}
+              className="w-full h-auto"
               priority
             />
           </div>
@@ -60,15 +59,29 @@ export default function Hero() {
             <span className="hidden lg:inline-block text-[20px] font-medium text-black/50 mb-3">
               採用支援 AI
             </span>
-            {/* メイン見出し */}
-            <h1 className="text-[36px] lg:text-[59px] font-bold leading-[1.5] text-black mb-3 max-w-[280px] lg:max-w-none">
-              動画とチャットで
-              <br />
-              求職者の熱量を上げる。
+            {/* メイン見出し — SP: 4行+白背景ハイライト / PC: 2行 */}
+            <h1 className="text-[36px] lg:text-[59px] font-bold leading-[1.5] text-black mb-3 lg:max-w-none">
+              {/* SP */}
+              <span className="flex flex-col gap-[8px] lg:hidden">
+                {["動画と", "チャットで", "求職者の", "熱量を上げる。"].map((line) => (
+                  <span key={line} className="bg-white rounded-[6px] px-2 py-[6px] w-fit">
+                    {line}
+                  </span>
+                ))}
+              </span>
+              {/* PC */}
+              <span className="hidden lg:inline">
+                動画とチャットで
+                <br />
+                求職者の熱量を上げる。
+              </span>
             </h1>
-            {/* サブ見出し */}
+            {/* サブ見出し — SP: 白背景ハイライト */}
             <p className="text-[20px] lg:text-[35px] font-medium text-black mb-0">
-              採用の機会損失をゼロに。
+              <span className="lg:hidden bg-white rounded-[6px] px-2 py-[4px]">
+                採用の機会損失をゼロに。
+              </span>
+              <span className="hidden lg:inline">採用の機会損失をゼロに。</span>
             </p>
 
             {/* ── バッジ ── */}
@@ -97,15 +110,44 @@ export default function Hero() {
 
         {/* ■ トラスト / 導入企業セクション */}
         <div className="mt-6 lg:mt-[83px] text-center">
+          <p className="text-[14px] lg:text-[16px] text-black/60 mb-4 leading-[1.5]">
+            2月にベータ版ローンチ後、
+            <br className="lg:hidden" />
+            現在10社以上の企業様でトライアル実施中
+          </p>
           <div className="inline-block bg-white rounded-[30px] px-[16px] py-[12px] mb-[24px]">
             <p className="text-[13px] lg:text-[16px] font-medium text-black leading-[1.5]">
               導入企業の例
             </p>
           </div>
 
-          {/* ロゴカルーセル */}
+          {/* SP: ロゴ ハニカムグリッド（3-2-2配置） */}
+          <div className="lg:hidden flex flex-col items-center gap-3">
+            {[logos.slice(0, 3), logos.slice(3, 5), logos.slice(5, 7)].map(
+              (row, ri) => (
+                <div key={ri} className="flex justify-center gap-3">
+                  {row.map((logo) => (
+                    <div
+                      key={logo.alt}
+                      className="w-[108px] h-[45px] bg-white rounded flex items-center justify-center p-1 flex-shrink-0"
+                    >
+                      <Image
+                        src={`${basePath}/images/logos/${logo.src}`}
+                        alt={logo.alt}
+                        width={160}
+                        height={56}
+                        className="object-contain max-h-[36px]"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )
+            )}
+          </div>
+
+          {/* PC: ロゴカルーセル */}
           <div
-            className="relative overflow-hidden"
+            className="hidden lg:block relative overflow-hidden"
             style={{
               WebkitMaskImage:
                 "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)",
@@ -114,20 +156,19 @@ export default function Hero() {
             }}
           >
             <div className="flex animate-marquee hover:[animation-play-state:paused] w-max">
-              {/* 2セット並べて無限ループ */}
               {[0, 1].map((set) => (
-                <div key={set} className="flex gap-[24px] lg:gap-[32px] px-[12px] lg:px-[16px]">
+                <div key={set} className="flex gap-[32px] px-[16px]">
                   {logos.map((logo) => (
                     <div
                       key={`${set}-${logo.alt}`}
-                      className="w-[108px] h-[45px] lg:w-[184px] lg:h-[72px] bg-white rounded flex items-center justify-center p-1 lg:p-2 flex-shrink-0"
+                      className="w-[184px] h-[72px] bg-white rounded flex items-center justify-center p-2 flex-shrink-0"
                     >
                       <Image
                         src={`${basePath}/images/logos/${logo.src}`}
                         alt={logo.alt}
                         width={160}
                         height={56}
-                        className="object-contain max-h-[36px] lg:max-h-[56px]"
+                        className="object-contain max-h-[56px]"
                       />
                     </div>
                   ))}

@@ -5,7 +5,12 @@ export default function CTABanner() {
   return (
     <section className="relative bg-dark py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-center">
+        <div className="flex flex-col lg:flex-row items-center justify-center">
+          {/* Badge（SP: 上部中央 / PC: 右側） */}
+          <div className="lg:hidden mb-6">
+            <Badge shadow="dark" />
+          </div>
+
           <div className="text-center max-w-3xl">
             <h2 className="text-xl lg:text-[32px] font-medium text-white leading-[1.5] mb-6">
               初期費用0円・初月無料で、
@@ -22,7 +27,7 @@ export default function CTABanner() {
             </div>
           </div>
 
-          {/* Badge（PC のみ） */}
+          {/* Badge（PC のみ: 右側） */}
           <div className="hidden lg:block ml-8 flex-shrink-0">
             <Badge shadow="dark" />
           </div>
