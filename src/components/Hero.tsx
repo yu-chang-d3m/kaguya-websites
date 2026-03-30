@@ -62,9 +62,9 @@ export default function Hero() {
             {/* メイン見出し — SP: 4行+白背景ハイライト / PC: 2行 */}
             <h1 className="text-[36px] lg:text-[59px] font-bold leading-[1.5] text-black mb-3 lg:max-w-none">
               {/* SP */}
-              <span className="flex flex-col gap-[8px] lg:hidden">
+              <span className="flex flex-col gap-[9px] lg:hidden">
                 {["動画と", "チャットで", "求職者の", "熱量を上げる。"].map((line) => (
-                  <span key={line} className="bg-white rounded-[6px] px-2 py-[6px] w-fit">
+                  <span key={line} className="bg-white rounded-[6px] px-2 leading-[51px] w-fit">
                     {line}
                   </span>
                 ))}
@@ -85,12 +85,12 @@ export default function Hero() {
             </p>
 
             {/* ── バッジ ── */}
-            <div className="flex justify-start mt-6 lg:mt-8">
+            <div className="flex justify-start mt-[80px] lg:mt-8">
               <Badge />
             </div>
 
             {/* ── CTAボタン（縦積み） ── */}
-            <div className="mt-6 lg:mt-10">
+            <div className="mt-8 lg:mt-10">
               <CTAButtons layout="col" />
             </div>
           </div>

@@ -15,7 +15,7 @@ export default function CTAButtons({
       : "bg-white border-3 border-[#00ac92] text-[#00b183] hover:bg-primary/5";
 
   return (
-    <div className={`flex ${layout === "col" ? "flex-col gap-[23px]" : "flex-col sm:flex-row gap-4"} justify-center lg:justify-start`}>
+    <div className={`flex ${layout === "col" ? "flex-col gap-4" : "flex-col sm:flex-row gap-4"} justify-center lg:justify-start`}>
       <a
         href="#contact"
         className={`inline-flex items-center justify-center w-[342px] lg:w-[400px] h-[56px] rounded-[88px] font-bold text-[16px] transition-colors shadow-[0px_4px_32px_rgba(0,0,0,0.15)] ${primaryClass}`}
