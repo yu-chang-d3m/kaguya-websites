@@ -5,14 +5,14 @@ import CTAButtons from "./CTAButtons";
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const logos = [
+  { src: "empowerx.svg", alt: "EmpowerX" },
+  { src: "proreach.svg", alt: "Proreach" },
+  { src: "hitokuse.svg", alt: "ヒトクセ" },
   { src: "dairii.svg", alt: "dairii" },
-  { src: "hrdoc.svg", alt: "HR doc." },
   { src: "omochiii.svg", alt: "omochiii" },
   { src: "quuu.svg", alt: "quuu" },
+  { src: "hrdoc.svg", alt: "HR doc." },
   { src: "d3m.svg", alt: "D3M" },
-  { src: "hitokuse.svg", alt: "ヒトクセ" },
-  { src: "proreach.svg", alt: "Proreach" },
-  { src: "empowerx.svg", alt: "EmpowerX" },
 ];
 
 export default function Hero() {
