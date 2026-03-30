@@ -12,6 +12,7 @@ const logos = [
   { src: "d3m.svg", alt: "D3M" },
   { src: "hitokuse.svg", alt: "ヒトクセ" },
   { src: "proreach.svg", alt: "Proreach" },
+  { src: "empowerx.svg", alt: "EmpowerX" },
 ];
 
 export default function Hero() {
@@ -121,9 +122,9 @@ export default function Hero() {
             </p>
           </div>
 
-          {/* SP: ロゴ ハニカムグリッド（3-2-2配置） */}
+          {/* SP: ロゴ ハニカムグリッド（3-3-2配置） */}
           <div className="lg:hidden flex flex-col items-center gap-3">
-            {[logos.slice(0, 3), logos.slice(3, 5), logos.slice(5, 7)].map(
+            {[logos.slice(0, 3), logos.slice(3, 6), logos.slice(6, 8)].map(
               (row, ri) => (
                 <div key={ri} className="flex justify-center gap-3">
                   {row.map((logo) => (
